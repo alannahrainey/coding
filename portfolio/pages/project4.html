@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alannah Rainey</title>
+  <link rel="stylesheet" href="project4.css">
+  <style>
+    body {
+      background-color: white;
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      margin-left: 50px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: calc(100% - 50px); 
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin-bottom: 5px;
+    }
+    .portfolio-name {
+      text-align: left;
+      font-size: 150px;
+      font-weight: bold;
+      font-style: oblique;
+      padding-bottom: 10px;
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      left: 10px;
+    }
+    iframe {
+      float: left;
+      width: 400px; 
+      height: 400px; 
+      margin-right: 20px; 
+      margin-top: 0px;
+    }
+    h2{
+      margin-left: 420px; 
+      margin-top: 100px;
+    }
+    p{
+      margin-left: 420px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <iframe src="https://editor.p5js.org/arainey/full/2af5I617w"></iframe>
+    <h2>Reflection</h2>
+    <p>
+      This is an experimental clock design created in p5.js. The clock represents the passing of time through the rotting of an apple. The apple is a 3D sphere that progressively rots. To create a dynamic composition, I used rotate features to show the dimensions of the apple as it rots. For the clock that is positioned in the top left corner, I used lines with angles tied to seconds, minutes, and hours. I learned how to use new aspects of JavaScript in this assignment such as cos(), sin(), map, and lerp.
+    </p>
+  </main>
+  <div class="portfolio-name">Project 4</div>
+</body>
+</html>

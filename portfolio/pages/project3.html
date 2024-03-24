@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alannah Rainey</title>
+  <link rel="stylesheet" href="project3.css">
+  <style>
+     body {
+ background-color: white;
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin-bottom: 5px;
+    }
+    .portfolio-name {
+      text-align: left;
+      font-size: 150px;
+      font-weight: bold;
+      font-style: oblique;
+      padding-bottom: 10px;
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      left: 10px;
+    }
+    iframe {
+      float: left; 
+      width: 400px; 
+      height: 400px; 
+      margin-right: 20px; 
+      margin-top: 0px;
+    }
+    h2{
+      margin-left: 420px; 
+      margin-top: 10px;
+    }
+    p{
+      margin-left: 420px;
+      margin-top: 90px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+  </main>
+  <div class="portfolio-name">Project 3</div>
+  <div class="fullwidth">
+
+    <iframe style="width:400px;height:440px;" src="https://editor.p5js.org/arainey/full/LVhtudEPh"></iframe>
+
+  </div>
+
+  <p>
+    Instructions: Interact with the drawing by hovering your mouse in a circle around the perimeter of the canvas. Click the canvas to change the seasons.
+  </p>
+
+  <h2>
+    Initial Sketch
+  </h2>
+
+  <img src="images/sketch.jpg" alt="Sketch" width="500" height="600">
+
+  
+  <p>
+    This is my initial sketch showing the intention to produce the randomized animation of a tree growing.
+  </p>
+
+  <h2>
+    Design Process + Reflections
+  </h2>
+
+  <p>
+    First, I declared all user-defined variables. Then, I uploaded images for the background. Then I created the basic shape primatives for the tree trunk. Then, I added the star function for the tree leaves and used mouseX and mouseY to create varying size. I then added rgb color ranges and variables in an array for the diverse effect using the random function. Then using if then statements, I created a rotation for the seasons, so that the season on the star and the background would change with mousePressed. This process took me a while and exploring new functions to complete. I most struggled with getting the timing right for the random function.
+  </p>
+</body>
+</html>

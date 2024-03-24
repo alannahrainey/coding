@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alannah Rainey</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Helvetica, Arial, sans-serif;
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        /* Video Background */
+        .background-video {
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%); /* Center the video */
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100; /* Ensure it's behind all other content */
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        /* Hamburger Menu Styling */
+        #menuToggle {
+            display: block;
+            position: absolute; /* Changed to absolute to ensure it's visible */
+            top: 30px;
+            left: 30px;
+            z-index: 1000; /* Higher z-index to ensure it's on top */
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0; /* Hide this */
+            z-index: 2; /* and make it clickable */
+            -webkit-touch-callout: none;
+        }
+
+        #menuToggle span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: #000; /* Make the bars black */
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        opacity 0.55s ease;
+        }
+
+        #menuToggle input:checked ~ span {
+            background: #232323; /* Slightly lighter shade when active */
+        }
+
+        /* Make the menu with rounded corners */
+        #menu {
+            position: absolute;
+            width: 300px;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: 125px;
+            background: #ededed; /* Background of the menu */
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            border-radius: 20px; /* Rounded corners */
+            z-index: 1000; /* Ensure the menu is above the video */
+        }
+
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+        }
+
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+        #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+        }
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="W_Background.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <nav>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Add your main content here -->
+</body>
+</html>
