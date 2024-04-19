@@ -44,27 +44,194 @@
     }
     .projects-container {
       display: flex;
-      justify-content: center;
-      margin-top: 200px;
+      flex-wrap: wrap; 
+      justify-content: center; 
+      margin-top: 100px;
+      gap: 20px; 
     }
     .project {
-      width: 200px; 
-      height: 200px; 
-      margin: 0 10px; 
-      background-color: #000; 
+      width: calc((100% / 5) - 40px);
+      height: 200px;
+      margin: 10px;
+      background-color: #000;
       text-align: center;
-      line-height: 200px; 
-      color: white; 
-      font-family: Helvetica, Arial, sans-serif; 
+      line-height: 200px;
+      color: white;
+      font-family: Helvetica, Arial, sans-serif;
     }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.navbar {
+  width: 5%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+   
+}
+
+.navbar .nav-container a:hover{
+   color: purple;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+/* Making the hamburger */
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 28px;
+  width: 34px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .bar {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+
+.nav-container .hamburger-lines .bar1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .bar2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .bar3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 10px;
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -100px;
+  padding-left: 150px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #0e2431;
+}
+
+/* Controlling the state of the icon */
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .bar1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .bar2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .bar3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+    <div class="navbar">
+      <div class="container nav-container">
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </div>
+        <div class="logo">
+        </div>
+        <div class="menu-items">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
   </header>
   <main>
     <div class="projects-container">
@@ -91,6 +258,7 @@
       </div>
       <div class="project">
         <a href="project8.html" style="color: rgb(209, 184, 46); text-decoration: none;">Project 8</a>
+      </div>
       </div>
     </div>
   </main>
